@@ -17,3 +17,11 @@ cc_prebuilt_binary {
     srcs: ["uboot_tools/mkenvimage"],
     defaults: ["cuttlefish_host_only"],
 }
+
+// Needed for beagle_x15 target, not cuttlefish.
+cc_prebuilt_binary {
+    name: "mkimage",
+    srcs: ["uboot_tools/mkimage"],
+    device_supported: false,
+    host_supported: true,
+}
