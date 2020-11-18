@@ -1444,8 +1444,8 @@ fff26855 r print_size.names
 fff29e20 r .L.str.9
 fff29e81 r .L.str.18
 fff29e86 r .L.str.19
-fff2f135 r tab_seq
-fff2f13e r version_string
+fff2f12f r tab_seq
+fff2f138 r version_string
 fff2f180 D gdt64
 fff2f180 d gdt
 fff2f1b0 d fwcfg_x86_ops
