@@ -21,9 +21,6 @@
         ]
     },
     {
-      "name": "RollbackTest"
-    },
-    {
       "name": "StagedRollbackTest"
     },
     {
@@ -48,6 +45,11 @@
     },
     {
       "name": "CtsPerfettoTestCases"
+    }
+  ],
+  "presubmit-large": [
+    {
+      "name": "RollbackTest"
     }
   ]
 }
