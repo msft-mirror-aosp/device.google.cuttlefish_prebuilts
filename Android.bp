@@ -30,3 +30,13 @@ cc_prebuilt_binary {
     device_supported: false,
     host_supported: true,
 }
+
+filegroup {
+    name: "cf_prebuilts_initramfs-5.4-arm64",
+    srcs: ["kernel/5.4-arm64/initramfs.img"],
+}
+
+filegroup {
+    name: "cf_prebuilts_initramfs-5.4-x86_64",
+    srcs: ["kernel/5.4-x86_64/initramfs.img"],
+}
