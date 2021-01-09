@@ -20,7 +20,7 @@ sh_binary_host {
 cc_prebuilt_binary {
     name: "mkenvimage",
     srcs: ["uboot_tools/mkenvimage"],
-    defaults: ["cuttlefish_host_only"],
+    defaults: ["cuttlefish_buildhost_only"],
 }
 
 // Needed for beagle_x15 target, not cuttlefish.
