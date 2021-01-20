@@ -40,3 +40,13 @@ filegroup {
     name: "cf_prebuilts_initramfs-5.4-x86_64",
     srcs: ["kernel/5.4-x86_64/initramfs.img"],
 }
+
+filegroup {
+    name: "cf_prebuilts_initramfs-5.10-arm64",
+    srcs: ["kernel/5.10-arm64/initramfs.img"],
+}
+
+filegroup {
+    name: "cf_prebuilts_initramfs-5.10-x86_64",
+    srcs: ["kernel/5.10-x86_64/initramfs.img"],
+}
