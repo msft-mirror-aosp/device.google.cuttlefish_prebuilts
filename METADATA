@@ -1,0 +1,4 @@
+third_party {
+  # would be notice save for scripts/extract-vmlinux
+  license_type: RESTRICTED
+}
