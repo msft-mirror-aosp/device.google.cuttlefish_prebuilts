@@ -21,9 +21,6 @@
         ]
     },
     {
-      "name": "StagedRollbackTest"
-    },
-    {
       "name": "CtsOsTestCases",
       "options": [
         {
@@ -50,6 +47,9 @@
   "presubmit-large": [
     {
       "name": "RollbackTest"
+    },
+    {
+      "name": "StagedRollbackTest"
     }
   ]
 }

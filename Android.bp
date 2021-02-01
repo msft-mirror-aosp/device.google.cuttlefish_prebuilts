@@ -20,7 +20,7 @@ sh_binary_host {
 cc_prebuilt_binary {
     name: "mkenvimage",
     srcs: ["uboot_tools/mkenvimage"],
-    defaults: ["cuttlefish_host_only"],
+    defaults: ["cuttlefish_buildhost_only"],
 }
 
 // Needed for beagle_x15 target, not cuttlefish.
@@ -29,4 +29,24 @@ cc_prebuilt_binary {
     srcs: ["uboot_tools/mkimage"],
     device_supported: false,
     host_supported: true,
+}
+
+filegroup {
+    name: "cf_prebuilts_initramfs-5.4-arm64",
+    srcs: ["kernel/5.4-arm64/initramfs.img"],
+}
+
+filegroup {
+    name: "cf_prebuilts_initramfs-5.4-x86_64",
+    srcs: ["kernel/5.4-x86_64/initramfs.img"],
+}
+
+filegroup {
+    name: "cf_prebuilts_initramfs-5.10-arm64",
+    srcs: ["kernel/5.10-arm64/initramfs.img"],
+}
+
+filegroup {
+    name: "cf_prebuilts_initramfs-5.10-x86_64",
+    srcs: ["kernel/5.10-x86_64/initramfs.img"],
 }
