@@ -50,3 +50,49 @@ filegroup {
     name: "cf_prebuilts_initramfs-5.10-x86_64",
     srcs: ["kernel/5.10-x86_64/initramfs.img"],
 }
+
+prebuilt_kernel_modules {
+    name: "cf_prebuilts_kernel_modules-5.10-arm64",
+    srcs: ["kernel/5.10-arm64/*.ko"],
+    kernel_version: "5.10",
+    enabled: false,
+    arch: {
+        arm64: {
+            enabled: true,
+        },
+    },
+}
+
+prebuilt_kernel_modules {
+    name: "cf_prebuilts_kernel_modules-5.10-x86_64",
+    srcs: ["kernel/5.10-x86_64/*.ko"],
+    kernel_version: "5.10",
+    enabled: false,
+    arch: {
+        x86_64: {
+            enabled: true,
+        },
+    },
+}
+
+android_filesystem {
+    name: "cf_ramdisk-5.10",
+    arch: {
+        arm64: {
+            deps: ["cf_prebuilts_kernel_modules-5.10-arm64"],
+        },
+        x86_64: {
+            deps: ["cf_prebuilts_kernel_modules-5.10-x86_64"],
+        },
+    },
+    type: "compressed_cpio",
+}
+
+bootimg {
+    name: "cf_bootimage-5.10",
+    ramdisk_module: "cf_ramdisk-5.10",
+    dtb_prebuilt: ":cf_dtb",
+    header_version: "3",
+    vendor_boot: true,
+    partition_name: "vendor_boot",
+}
