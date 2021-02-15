@@ -12,6 +12,21 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+package {
+    default_applicable_licenses: ["device_google_cuttlefish_prebuilts_license"],
+}
+
+// Added automatically by a large-scale-change
+// See: http://go/android-license-faq
+license {
+    name: "device_google_cuttlefish_prebuilts_license",
+    visibility: [":__subpackages__"],
+    license_kinds: [
+        "SPDX-license-identifier-GPL-2.0",
+    ],
+    // large-scale-change unable to identify any license_text files
+}
+
 sh_binary_host {
     name: "extract-vmlinux",
     src: "scripts/extract-vmlinux",
