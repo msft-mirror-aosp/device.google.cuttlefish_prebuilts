@@ -1987,8 +1987,8 @@ fff39fb0 r print_size.names
 fff3f523 r .L.str.8
 fff3f584 r .L.str.17
 fff3f589 r .L.str.18
-fff4688d r tab_seq
-fff46896 r version_string
+fff46893 r tab_seq
+fff4689c r version_string
 fff46900 D gdt64
 fff46900 d gdt
 fff46930 d fwcfg_x86_ops
