@@ -38,6 +38,17 @@ cc_prebuilt_binary {
     defaults: ["cuttlefish_buildhost_only"],
 }
 
+prebuilt_build_tool {
+    name: "mkenvimage_host",
+    enabled: false,
+    target: {
+        linux: {
+            src: "uboot_tools/mkenvimage",
+            enabled: true,
+        },
+    },
+}
+
 // Needed for beagle_x15 target, not cuttlefish.
 cc_prebuilt_binary {
     name: "mkimage",
