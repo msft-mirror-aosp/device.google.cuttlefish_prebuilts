@@ -46,6 +46,10 @@ prebuilt_build_tool {
             src: "uboot_tools/mkenvimage",
             enabled: true,
         },
+        darwin: {
+            src: "uboot_tools/mkenvimage_mac.sh",
+            enabled: true,
+        },
     },
 }
 
