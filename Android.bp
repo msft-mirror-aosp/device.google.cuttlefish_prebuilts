@@ -32,6 +32,11 @@ sh_binary_host {
     src: "scripts/extract-vmlinux",
 }
 
+sh_binary_host {
+    name: "extract-ikconfig",
+    src: "scripts/extract-ikconfig",
+}
+
 cc_prebuilt_binary {
     name: "mkenvimage",
     srcs: ["uboot_tools/mkenvimage"],
