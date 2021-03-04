@@ -12,9 +12,29 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+package {
+    default_applicable_licenses: ["device_google_cuttlefish_prebuilts_license"],
+}
+
+// Added automatically by a large-scale-change
+// See: http://go/android-license-faq
+license {
+    name: "device_google_cuttlefish_prebuilts_license",
+    visibility: [":__subpackages__"],
+    license_kinds: [
+        "SPDX-license-identifier-GPL-2.0",
+    ],
+    // large-scale-change unable to identify any license_text files
+}
+
 sh_binary_host {
     name: "extract-vmlinux",
     src: "scripts/extract-vmlinux",
+}
+
+sh_binary_host {
+    name: "extract-ikconfig",
+    src: "scripts/extract-ikconfig",
 }
 
 cc_prebuilt_binary {
@@ -23,30 +43,25 @@ cc_prebuilt_binary {
     defaults: ["cuttlefish_buildhost_only"],
 }
 
+prebuilt_build_tool {
+    name: "mkenvimage_host",
+    enabled: false,
+    target: {
+        linux: {
+            src: "uboot_tools/mkenvimage",
+            enabled: true,
+        },
+        darwin: {
+            src: "uboot_tools/mkenvimage_mac.sh",
+            enabled: true,
+        },
+    },
+}
+
 // Needed for beagle_x15 target, not cuttlefish.
 cc_prebuilt_binary {
     name: "mkimage",
     srcs: ["uboot_tools/mkimage"],
     device_supported: false,
     host_supported: true,
-}
-
-filegroup {
-    name: "cf_prebuilts_initramfs-5.4-arm64",
-    srcs: ["kernel/5.4-arm64/initramfs.img"],
-}
-
-filegroup {
-    name: "cf_prebuilts_initramfs-5.4-x86_64",
-    srcs: ["kernel/5.4-x86_64/initramfs.img"],
-}
-
-filegroup {
-    name: "cf_prebuilts_initramfs-5.10-arm64",
-    srcs: ["kernel/5.10-arm64/initramfs.img"],
-}
-
-filegroup {
-    name: "cf_prebuilts_initramfs-5.10-x86_64",
-    srcs: ["kernel/5.10-x86_64/initramfs.img"],
 }
