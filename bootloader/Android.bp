@@ -1,3 +1,7 @@
+package {
+    default_applicable_licenses: ["Android-Apache-2.0"],
+}
+
 prebuilt_etc {
     name: "cuttlefish_crosvm_bootloader",
     // We don't have u-boot for arm and x86. But Soong demands us to provide
