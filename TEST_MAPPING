@@ -51,5 +51,10 @@
     {
       "name": "StagedRollbackTest"
     }
+  ],
+  "imports": [
+    {
+      "path": "packages/modules/Virtualization"
+    }
   ]
 }
