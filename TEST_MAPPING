@@ -4,6 +4,12 @@
       "name": "netd_integration_test"
     },
     {
+      "name": "OverlayDeviceTests"
+    },
+    {
+      "name": "CtsNativeVerifiedBootTestCases"
+    },
+    {
       "name": "CtsBionicTestCases"
     },
     {
