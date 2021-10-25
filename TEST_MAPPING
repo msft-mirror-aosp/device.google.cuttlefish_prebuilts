@@ -21,6 +21,12 @@
         ]
     },
     {
+      "name": "OverlayDeviceTests"
+    },
+    {
+      "name": "CtsNativeVerifiedBootTestCases"
+    },
+    {
       "name": "CtsOsTestCases",
       "options": [
         {
