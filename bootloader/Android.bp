@@ -18,6 +18,12 @@ prebuilt_etc {
     filename_from_src: true,
 }
 
+// copied from external/u-boot
+prebuilt_etc {
+    name: "microdroid_crosvm_bootloader.avbpubkey",
+    src: "testkey_rsa4096.avbpubkey",
+}
+
 prebuilt_etc_host {
     name: "bootloader_qemu_x86_64",
     filename: "bootloader.qemu",
