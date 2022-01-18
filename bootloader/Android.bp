@@ -25,6 +25,12 @@ prebuilt_etc {
 }
 
 prebuilt_etc_host {
+    name: "cvd_avb_pubkey",
+    filename: "cvd.avbpubkey",
+    src: "testkey_rsa4096.avbpubkey",
+}
+
+prebuilt_etc_host {
     name: "bootloader_qemu_x86_64",
     filename: "bootloader.qemu",
     sub_dir: "bootloader_x86_64",
