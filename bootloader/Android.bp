@@ -46,6 +46,20 @@ prebuilt_etc_host {
 }
 
 prebuilt_etc_host {
+    name: "bootloader_crosvm_x86_64",
+    filename: "bootloader.crosvm",
+    sub_dir: "bootloader_x86_64",
+    src: "crosvm_x86_64/u-boot.rom",
+}
+
+prebuilt_etc_host {
+    name: "bootloader_crosvm_aarch64",
+    filename: "bootloader.crosvm",
+    sub_dir: "bootloader_aarch64",
+    src: "crosvm_aarch64/u-boot.bin",
+}
+
+prebuilt_etc_host {
     name: "bootloader_qemu_arm",
     filename: "bootloader.qemu",
     sub_dir: "bootloader_arm",
