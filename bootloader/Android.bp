@@ -2,29 +2,6 @@ package {
     default_applicable_licenses: ["Android-Apache-2.0"],
 }
 
-prebuilt_etc {
-    name: "microdroid_crosvm_bootloader",
-    // We don't have u-boot for arm and x86. But Soong demands us to provide
-    // src anyway, and it needs to contain the avbpubkey for other build rules.
-    // Satisfy that by providing the avbpubkey as the src.
-    src: "testkey_rsa4096.avbpubkey",
-    arch: {
-        arm64: {
-            src: "crosvm_locked_aarch64/u-boot.bin",
-        },
-        x86_64: {
-            src: "crosvm_locked_x86_64/u-boot.rom",
-        },
-    },
-    filename_from_src: true,
-}
-
-// copied from external/u-boot
-prebuilt_etc {
-    name: "microdroid_crosvm_bootloader.avbpubkey",
-    src: "testkey_rsa4096.avbpubkey",
-}
-
 prebuilt_etc_host {
     name: "cvd_avb_pubkey",
     filename: "cvd.avbpubkey",
