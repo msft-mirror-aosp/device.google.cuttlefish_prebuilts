@@ -2646,9 +2646,9 @@ fff52222 r print_size.names
 fff59fbd r .L.str.8
 fff5a019 r .L.str.17
 fff5a01e r .L.str.18
-fff60ba4 r tab_seq
-fff60bad r version_string
-fff60bf8 r video_fontdata
+fff60ba0 r tab_seq
+fff60ba9 r version_string
+fff60bf4 r video_fontdata
 fff61c00 d mp_steps
 fff61c80 D gdt64
 fff61c80 d gdt
