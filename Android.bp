@@ -36,11 +36,3 @@ sh_binary_host {
     name: "extract-ikconfig",
     src: "scripts/extract-ikconfig",
 }
-
-// Needed for beagle_x15 target, not cuttlefish.
-cc_prebuilt_binary {
-    name: "mkimage",
-    srcs: ["uboot_tools/mkimage"],
-    device_supported: false,
-    host_supported: true,
-}
