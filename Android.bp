@@ -44,3 +44,40 @@ cc_prebuilt_binary {
     device_supported: false,
     host_supported: true,
 }
+
+// These are set up as two separate executables rather than a symlink so that
+// either can be downloaded as a standalone statically linked executable from
+// the build system.
+// arch arm64 manifest is at https://ci.android.com/builds/submitted/10526382/
+// aosp_cf_arm64_only_phone-trunk_staging-userdebug/latest/manifest_10526382.xml
+// arch x86_64 manifest is at https://ci.android.com/builds/submitted/10516121/
+// aosp_cf_x86_64_phone-trunk_staging-userdebug/latest/manifest_10516121.xml
+
+cc_prebuilt_binary  {
+    name: "cvd",
+    arch: {
+        arm64: {
+            srcs: ["cvd/cvd_arm64"],
+        },
+        x86_64: {
+            srcs: ["cvd/cvd_x86_64"],
+        },
+    },
+    symlinks: ["acloud"],
+    device_supported: false,
+    host_supported: true,
+}
+
+cc_prebuilt_binary  {
+    name: "fetch_cvd",
+    arch: {
+        arm64: {
+            srcs: ["cvd/fetch_cvd_arm64"],
+        },
+        x86_64: {
+            srcs: ["cvd/fetch_cvd_x86_64"],
+        },
+    },
+    device_supported: false,
+    host_supported: true,
+}
