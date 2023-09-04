@@ -2378,9 +2378,9 @@
 00070c28 b env_complete_buf
 00070e28 b tmp_buf
 00071030 b sector_buf
-000784ac A _image_binary_end
-000784ac R __rel_dyn_end
-000784ac R _end
+000784b4 A _image_binary_end
+000784b4 R __rel_dyn_end
+000784b4 R _end
 00171030 b print_efiname.name
 00171058 B virtio_bootdev_ops
 0017105c b virtio_pci_bind.num_devs
