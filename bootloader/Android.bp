@@ -3,8 +3,14 @@ package {
 }
 
 prebuilt_etc_host {
-    name: "cvd_avb_pubkey",
-    filename: "cvd.avbpubkey",
+    name: "cvd_avb_pubkey_rsa2048",
+    filename: "cvd_rsa2048.avbpubkey",
+    src: "testkey_rsa2048.avbpubkey",
+}
+
+prebuilt_etc_host {
+    name: "cvd_avb_pubkey_rsa4096",
+    filename: "cvd_rsa4096.avbpubkey",
     src: "testkey_rsa4096.avbpubkey",
 }
 
