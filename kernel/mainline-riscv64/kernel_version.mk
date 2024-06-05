@@ -1,0 +1,1 @@
+BOARD_KERNEL_VERSION := 6.8.0-mainline-ga5ed8b92e9f6-ab11698348
