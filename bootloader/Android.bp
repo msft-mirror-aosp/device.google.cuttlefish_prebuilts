@@ -41,6 +41,12 @@ prebuilt_etc {
     src: "crosvm_aarch64/u-boot.bin",
 }
 
+prebuilt_etc {
+    name: "android_bootloader_crosvm_x86_64",
+    filename: "u-boot.rom",
+    src: "crosvm_x86_64/u-boot.rom",
+}
+
 prebuilt_etc_host {
     name: "bootloader_qemu_arm",
     filename: "bootloader.qemu",
