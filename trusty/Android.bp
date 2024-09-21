@@ -13,17 +13,14 @@
 // limitations under the License.
 
 prebuilt_etc {
-    name: "trusty_vm_nonsecure",
+    name: "lk_trusty.elf",
     system_ext_specific: true,
     relative_install_path: "hw",
     filename: "lk_trusty.elf",
     arch: {
         x86_64: {
-            src: "generic-x86_64.lk.elf",
+            src: "generic-x86_64-test.lk.elf",
         },
     },
     src: ":empty_file",
-    init_rc: [
-        "trusty_vm_nonsecure.rc",
-    ],
 }
