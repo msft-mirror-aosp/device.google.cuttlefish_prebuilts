@@ -15,7 +15,7 @@
 prebuilt_etc {
     name: "lk_trusty.elf",
     system_ext_specific: true,
-    relative_install_path: "hw",
+    relative_install_path: "vm/trusty_vm",
     filename: "lk_trusty.elf",
     arch: {
         x86_64: {
