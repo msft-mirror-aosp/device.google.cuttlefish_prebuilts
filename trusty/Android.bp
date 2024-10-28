@@ -19,7 +19,7 @@ prebuilt_etc {
     filename: "lk_trusty.elf",
     arch: {
         x86_64: {
-            src: "generic-x86_64-test.lk.elf",
+            src: ":trusty-test-lk.elf",
         },
     },
     src: ":empty_file",
