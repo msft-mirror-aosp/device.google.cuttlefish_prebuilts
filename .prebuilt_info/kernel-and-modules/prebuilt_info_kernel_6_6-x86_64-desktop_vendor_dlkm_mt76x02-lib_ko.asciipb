@@ -1,0 +1,11 @@
+drops {
+  android_build_drop {
+    build_id: "12752978"
+    target: "kernel_virt_x86_64"
+    source_file: "mt76x02-lib.ko"
+  }
+  dest_file: "kernel/6.6-x86_64-desktop/vendor_dlkm/mt76x02-lib.ko"
+  version: "12752978"
+  version_group: "kernel-and-modules"
+  git_project: "device/google/cuttlefish_prebuilts"
+}
