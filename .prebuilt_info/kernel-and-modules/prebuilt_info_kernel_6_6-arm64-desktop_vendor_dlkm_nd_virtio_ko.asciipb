@@ -1,0 +1,11 @@
+drops {
+  android_build_drop {
+    build_id: "12810766"
+    target: "kernel_virt_aarch64"
+    source_file: "nd_virtio.ko"
+  }
+  dest_file: "kernel/6.6-arm64-desktop/vendor_dlkm/nd_virtio.ko"
+  version: "12810766"
+  version_group: "kernel-and-modules"
+  git_project: "device/google/cuttlefish_prebuilts"
+}
