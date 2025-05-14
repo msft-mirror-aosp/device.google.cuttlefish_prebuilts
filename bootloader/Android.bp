@@ -23,6 +23,9 @@ license {
     license_kinds: [
         "SPDX-license-identifier-GPL-2.0-only",
     ],
+    license_text: [
+        "LICENSE",
+    ],
     // large-scale-change unable to identify any license_text files
 }
 
